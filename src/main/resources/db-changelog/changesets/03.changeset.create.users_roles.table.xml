@@ -20,6 +20,7 @@
                                  baseColumnNames="ROLE_ID"
                                  referencedTableName="Roles"
                                  referencedColumnNames="ROLE_ID"/>
-        <addUniqueConstraint columnNames="USER_ID, ROLE_ID" constraintName="Users_Roles_UR_uniq"/>
+        <addUniqueConstraint tableName="Users_Roles" columnNames="USER_ID, ROLE_ID"
+                             constraintName="Users_Roles_UR_uniq"/>
     </changeSet>
 </databaseChangeLog>
