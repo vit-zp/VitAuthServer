@@ -14,4 +14,10 @@ public class HomeController {
         model.addAttribute("message", "This is welcome page!");
         return "home";
     }
+
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String loginPage(Model model) {
+
+        return "login";
+    }
 }

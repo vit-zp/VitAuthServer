@@ -5,7 +5,9 @@
 
     | &nbsp;
 
-    <a th:href="@{/}">User Info</a>
+    <span th:if="${#request.userPrincipal == null}"><a th:href="@{/login}">Login</a></span></span>
+
+    <span th:if="${#request.userPrincipal != null}" th:class="authorized"><a th:href="@{/}">User Info</a>
 
     | &nbsp;
 
@@ -13,6 +15,6 @@
 
     | &nbsp;
 
-    <!--<a th:if="${#request.userPrincipal != null}" th:href="@{/logout}">Logout</a>-->
+    <a th:href="@{/logout}">Logout</a></span>
 
 </div>
