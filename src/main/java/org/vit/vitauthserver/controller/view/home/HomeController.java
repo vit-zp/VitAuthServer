@@ -20,4 +20,10 @@ public class HomeController {
 
         return "login";
     }
+
+    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    public String logoutSuccessfulPage(Model model) {
+        model.addAttribute("title", "Logout");
+        return "logout";
+    }
 }
