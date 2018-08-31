@@ -1,4 +1,4 @@
-package org.vit.vitauthserver;
+package org.vit.vitauthserver.repository.user;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
