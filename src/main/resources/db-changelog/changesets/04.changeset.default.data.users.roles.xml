@@ -27,5 +27,29 @@
         </insert>
     </changeSet>
 
+    <changeSet id="04.changeset.insert.role.user"
+               author="Vit.Khodak" failOnError="false" dbms="h2">
+        <insert tableName="Roles">
+            <column name="ROLE_NAME" value="ROLE_USER"></column>
+        </insert>
+    </changeSet>
+
+    <changeSet id="04.changeset.insert.user.user"
+               author="Vit.Khodak" failOnError="false" dbms="h2">
+        <insert tableName="Users">
+            <column name="USER_NAME" value="user"></column>
+            <column name="ENCRYPTED_PASSWORD" value="9999"></column>
+            <column name="ENABLED" value="true"></column>
+        </insert>
+    </changeSet>
+
+    <changeSet id="04.changeset.insert.user.role.user"
+               author="Vit.Khodak" failOnError="false" dbms="h2">
+        <insert tableName="Users_Roles">
+            <column name="USER_ID" value="2"></column>
+            <column name="ROLE_ID" value="2"></column>
+        </insert>
+    </changeSet>
+
 
 </databaseChangeLog>
